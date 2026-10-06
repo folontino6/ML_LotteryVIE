@@ -1,0 +1,47 @@
+{
+  "canh_bao": "Đây là công cụ thử nghiệm thống kê/học máy. Bingo18 là quá trình ngẫu nhiên; không có phương pháp nào đảm bảo dự đoán đúng. Chỉ dùng cho mục đích tham khảo và học tập.",
+  "kiem_tra_du_lieu": {
+    "canh_bao": [],
+    "tong_dong_doc": 56702,
+    "loai_do_thieu_so": 0,
+    "loai_do_so_khong_hop_le": 0,
+    "loai_do_trung_draw_id": 0,
+    "dong_sum_sai_bi_loai": 0,
+    "cho_thieu_ky": 0,
+    "so_ky_hop_le": 56702,
+    "draw_id_dau": 1,
+    "draw_id_cuoi": 56702,
+    "thong_ke": {
+      "tan_suat_mat_1_6": [
+        28137,
+        28491,
+        28546,
+        28206,
+        28288,
+        28438
+      ],
+      "p_value_chi2_mat": 0.4412241802193091,
+      "p_value_chi2_tong_vs_ly_thuyet": 0.801333867054367,
+      "tu_tuong_quan_tong_lag1": 0.0034143981507679124,
+      "tuong_quan_giua_vi_tri_xuc_xac": [
+        [
+          1.0,
+          0.0007274706208462209,
+          0.007443312090503002
+        ],
+        [
+          0.000727470620846221,
+          0.9999999999999999,
+          -0.007766633955715946
+        ],
+        [
+          0.007443312090503002,
+          -0.007766633955715946,
+          1.0
+        ]
+      ],
+      "mutual_information_chuyen_tiep_tong_lag1_nats": 0.001989602219499593,
+      "ghi_chu": "p-value lớn nghĩa là chưa thấy bằng chứng dữ liệu lệch khỏi xúc xắc công bằng."
+    }
+  }
+}

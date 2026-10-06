@@ -1,0 +1,420 @@
+{
+  "thoi_diem": "2026-10-05 23:18:47",
+  "canh_bao": "Đây là công cụ thử nghiệm thống kê/học máy. Xổ số Vietlott 6/55 là quá trình ngẫu nhiên; không có phương pháp nào đảm bảo dự đoán đúng. Chỉ dùng cho mục đích tham khảo và học tập.",
+  "so_ky_du_lieu": 1405,
+  "so_ky_danh_gia": 200,
+  "cau_hinh": {
+    "csv_files": [
+      "C:\\Users\\nguye\\Desktop\\ml_vietlot\\power655.csv"
+    ],
+    "game": "power655",
+    "mode": "full",
+    "output_dir": "ml_output",
+    "seed": 42,
+    "warmup": 50,
+    "eval_steps": 200,
+    "retrain_every": 10,
+    "train_window": 600,
+    "n_estimators": 150,
+    "max_depth": 10,
+    "min_samples_leaf": 40,
+    "n_jobs": -1,
+    "top_k": 100,
+    "batch_size": 500000,
+    "combo_limit": 0,
+    "combo_sample": 20000,
+    "mc_tickets": 200,
+    "combos_eval_draws": 3,
+    "w_number": 1.0,
+    "w_pair": 0.5,
+    "w_triple": 0.25,
+    "w_struct": 0.5,
+    "skip_engine": false,
+    "prediction_file": "",
+    "actual": "",
+    "no_save_model": false,
+    "debug": false
+  },
+  "chien_luoc": {
+    "Random Forest": {
+      "so_ky": 200,
+      "khop_trung_binh": 0.63,
+      "khop_ky_vong_ngau_nhien": 0.6545454545454545,
+      "z": -0.47719767147305786,
+      "p_value_mot_phia": 0.6833893154585573,
+      "phan_bo": [
+        {
+          "so_khop": "0/6",
+          "so_lan": 103,
+          "ty_le": 0.515,
+          "ty_le_ngau_nhien_ly_thuyet": 0.4823722928939355
+        },
+        {
+          "so_khop": "1/6",
+          "so_lan": 70,
+          "ty_le": 0.35,
+          "ty_le_ngau_nhien_ly_thuyet": 0.3946682396404927
+        },
+        {
+          "so_khop": "2/6",
+          "so_lan": 25,
+          "ty_le": 0.125,
+          "ty_le_ngau_nhien_ly_thuyet": 0.10963006656680352
+        },
+        {
+          "so_khop": "3/6",
+          "so_lan": 2,
+          "ty_le": 0.01,
+          "ty_le_ngau_nhien_ly_thuyet": 0.012710732355571424
+        },
+        {
+          "so_khop": "4/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 0.0006084925063837383
+        },
+        {
+          "so_khop": "5/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 1.0141541773062305e-05
+        },
+        {
+          "so_khop": "6/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 3.449504004442961e-08
+        }
+      ],
+      "so_ky_khop_tu_3": 2,
+      "counts": [
+        103,
+        70,
+        25,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "Hồi quy Logistic": {
+      "so_ky": 200,
+      "khop_trung_binh": 0.64,
+      "khop_ky_vong_ngau_nhien": 0.6545454545454545,
+      "z": -0.2827838053173674,
+      "p_value_mot_phia": 0.6113287153314722,
+      "phan_bo": [
+        {
+          "so_khop": "0/6",
+          "so_lan": 100,
+          "ty_le": 0.5,
+          "ty_le_ngau_nhien_ly_thuyet": 0.4823722928939355
+        },
+        {
+          "so_khop": "1/6",
+          "so_lan": 73,
+          "ty_le": 0.365,
+          "ty_le_ngau_nhien_ly_thuyet": 0.3946682396404927
+        },
+        {
+          "so_khop": "2/6",
+          "so_lan": 26,
+          "ty_le": 0.13,
+          "ty_le_ngau_nhien_ly_thuyet": 0.10963006656680352
+        },
+        {
+          "so_khop": "3/6",
+          "so_lan": 1,
+          "ty_le": 0.005,
+          "ty_le_ngau_nhien_ly_thuyet": 0.012710732355571424
+        },
+        {
+          "so_khop": "4/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 0.0006084925063837383
+        },
+        {
+          "so_khop": "5/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 1.0141541773062305e-05
+        },
+        {
+          "so_khop": "6/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 3.449504004442961e-08
+        }
+      ],
+      "so_ky_khop_tu_3": 1,
+      "counts": [
+        100,
+        73,
+        26,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "Tần suất 100 kỳ": {
+      "so_ky": 200,
+      "khop_trung_binh": 0.575,
+      "khop_ky_vong_ngau_nhien": 0.6545454545454545,
+      "z": -1.5464739353293555,
+      "p_value_mot_phia": 0.9390049249033284,
+      "phan_bo": [
+        {
+          "so_khop": "0/6",
+          "so_lan": 108,
+          "ty_le": 0.54,
+          "ty_le_ngau_nhien_ly_thuyet": 0.4823722928939355
+        },
+        {
+          "so_khop": "1/6",
+          "so_lan": 72,
+          "ty_le": 0.36,
+          "ty_le_ngau_nhien_ly_thuyet": 0.3946682396404927
+        },
+        {
+          "so_khop": "2/6",
+          "so_lan": 17,
+          "ty_le": 0.085,
+          "ty_le_ngau_nhien_ly_thuyet": 0.10963006656680352
+        },
+        {
+          "so_khop": "3/6",
+          "so_lan": 3,
+          "ty_le": 0.015,
+          "ty_le_ngau_nhien_ly_thuyet": 0.012710732355571424
+        },
+        {
+          "so_khop": "4/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 0.0006084925063837383
+        },
+        {
+          "so_khop": "5/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 1.0141541773062305e-05
+        },
+        {
+          "so_khop": "6/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 3.449504004442961e-08
+        }
+      ],
+      "so_ky_khop_tu_3": 3,
+      "counts": [
+        108,
+        72,
+        17,
+        3,
+        0,
+        0,
+        0
+      ]
+    },
+    "Số quá hạn (delay)": {
+      "so_ky": 200,
+      "khop_trung_binh": 0.675,
+      "khop_ky_vong_ngau_nhien": 0.6545454545454545,
+      "z": 0.3976647262275493,
+      "p_value_mot_phia": 0.3454386710048809,
+      "phan_bo": [
+        {
+          "so_khop": "0/6",
+          "so_lan": 98,
+          "ty_le": 0.49,
+          "ty_le_ngau_nhien_ly_thuyet": 0.4823722928939355
+        },
+        {
+          "so_khop": "1/6",
+          "so_lan": 73,
+          "ty_le": 0.365,
+          "ty_le_ngau_nhien_ly_thuyet": 0.3946682396404927
+        },
+        {
+          "so_khop": "2/6",
+          "so_lan": 25,
+          "ty_le": 0.125,
+          "ty_le_ngau_nhien_ly_thuyet": 0.10963006656680352
+        },
+        {
+          "so_khop": "3/6",
+          "so_lan": 4,
+          "ty_le": 0.02,
+          "ty_le_ngau_nhien_ly_thuyet": 0.012710732355571424
+        },
+        {
+          "so_khop": "4/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 0.0006084925063837383
+        },
+        {
+          "so_khop": "5/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 1.0141541773062305e-05
+        },
+        {
+          "so_khop": "6/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 3.449504004442961e-08
+        }
+      ],
+      "so_ky_khop_tu_3": 4,
+      "counts": [
+        98,
+        73,
+        25,
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "Ngẫu nhiên": {
+      "so_ky": 200,
+      "khop_trung_binh": 0.64,
+      "khop_ky_vong_ngau_nhien": 0.6545454545454545,
+      "z": -0.2827838053173674,
+      "p_value_mot_phia": 0.6113287153314722,
+      "phan_bo": [
+        {
+          "so_khop": "0/6",
+          "so_lan": 96,
+          "ty_le": 0.48,
+          "ty_le_ngau_nhien_ly_thuyet": 0.4823722928939355
+        },
+        {
+          "so_khop": "1/6",
+          "so_lan": 83,
+          "ty_le": 0.415,
+          "ty_le_ngau_nhien_ly_thuyet": 0.3946682396404927
+        },
+        {
+          "so_khop": "2/6",
+          "so_lan": 19,
+          "ty_le": 0.095,
+          "ty_le_ngau_nhien_ly_thuyet": 0.10963006656680352
+        },
+        {
+          "so_khop": "3/6",
+          "so_lan": 1,
+          "ty_le": 0.005,
+          "ty_le_ngau_nhien_ly_thuyet": 0.012710732355571424
+        },
+        {
+          "so_khop": "4/6",
+          "so_lan": 1,
+          "ty_le": 0.005,
+          "ty_le_ngau_nhien_ly_thuyet": 0.0006084925063837383
+        },
+        {
+          "so_khop": "5/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 1.0141541773062305e-05
+        },
+        {
+          "so_khop": "6/6",
+          "so_lan": 0,
+          "ty_le": 0.0,
+          "ty_le_ngau_nhien_ly_thuyet": 3.449504004442961e-08
+        }
+      ],
+      "so_ky_khop_tu_3": 2,
+      "counts": [
+        96,
+        83,
+        19,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "baseline_ngau_nhien_mo_phong": {
+    "so_ve_moi_ky": 200,
+    "phan_bo": [
+      {
+        "so_khop": "0/6",
+        "so_lan": 19341,
+        "ty_le": 0.483525,
+        "ty_le_ngau_nhien_ly_thuyet": 0.4823722928939355
+      },
+      {
+        "so_khop": "1/6",
+        "so_lan": 15736,
+        "ty_le": 0.3934,
+        "ty_le_ngau_nhien_ly_thuyet": 0.3946682396404927
+      },
+      {
+        "so_khop": "2/6",
+        "so_lan": 4396,
+        "ty_le": 0.1099,
+        "ty_le_ngau_nhien_ly_thuyet": 0.10963006656680352
+      },
+      {
+        "so_khop": "3/6",
+        "so_lan": 504,
+        "ty_le": 0.0126,
+        "ty_le_ngau_nhien_ly_thuyet": 0.012710732355571424
+      },
+      {
+        "so_khop": "4/6",
+        "so_lan": 23,
+        "ty_le": 0.000575,
+        "ty_le_ngau_nhien_ly_thuyet": 0.0006084925063837383
+      },
+      {
+        "so_khop": "5/6",
+        "so_lan": 0,
+        "ty_le": 0.0,
+        "ty_le_ngau_nhien_ly_thuyet": 1.0141541773062305e-05
+      },
+      {
+        "so_khop": "6/6",
+        "so_lan": 0,
+        "ty_le": 0.0,
+        "ty_le_ngau_nhien_ly_thuyet": 3.449504004442961e-08
+      }
+    ]
+  },
+  "chat_luong_mo_hinh": {
+    "Random Forest": {
+      "auc_trung_binh": 0.4993707482993197,
+      "auc_ngau_nhien": 0.5,
+      "auc_z": -0.06790113491027926,
+      "brier_mo_hinh": 0.09732235105746213,
+      "brier_hang_so": 0.09719008264462808,
+      "cai_thien_brier": -0.001360924995996493
+    },
+    "Hồi quy Logistic": {
+      "auc_trung_binh": 0.4959013605442177,
+      "auc_ngau_nhien": 0.5,
+      "auc_z": -0.46082402158508856,
+      "brier_mo_hinh": 0.09725742080750303,
+      "brier_hang_so": 0.09719008264462808,
+      "cai_thien_brier": -0.0006928501452270197
+    }
+  },
+  "xep_hang_to_hop": {
+    "so_ky": 200,
+    "phan_vi_trung_binh": 0.49945787499999994,
+    "phan_vi_ngau_nhien": 0.5,
+    "z": -0.026558592536129546,
+    "p_value_mot_phia": 0.4894058999843679,
+    "giai_thich": "Phân vị = tỉ lệ tổ hợp ngẫu nhiên có điểm CAO hơn tổ hợp thực tế; nhỏ hơn 0.5 nghĩa là điểm số xếp kết quả thật cao hơn ngẫu nhiên.",
+    "so_mau_moi_ky": 20000
+  },
+  "ket_luan": "Không có chiến lược nào vượt ngẫu nhiên một cách có ý nghĩa thống kê (sau hiệu chỉnh nhiều phép thử). Điều này phù hợp với bản chất ngẫu nhiên của xổ số. Chất lượng xác suất từng số: Random Forest AUC=0.4994; Hồi quy Logistic AUC=0.4959 (0.5 = ngẫu nhiên). Phân vị trung bình của kết quả thật theo điểm tổ hợp: 0.499 (0.5 = ngẫu nhiên)."
+}

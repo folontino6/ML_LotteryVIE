@@ -1,0 +1,16 @@
+Refresh Bingo18 history from the API and rebuild sequential draw IDs:
+
+    python crawler.py
+
+For an existing CSV that still uses API `_id` values as `draw_id`, renumber it
+chronologically once with:
+
+    python renumber_draw_ids.py
+
+The CSV is saved to `data/bingo18.csv` with columns
+`draw_id,n1,n2,n3,sum`. The crawler fetches the complete history from
+2025-07-27 through the current local date on each run so it can deduplicate
+with API identifiers, order by draw timestamp, and regenerate sequential IDs.
+Full history: python crawler.py --full-refresh
+Resume/update: python crawler.py
+Small-range check: python crawler.py --start-date 2025-07-27 --end-date 2025-07-27 --output-dir <temporary-folder>

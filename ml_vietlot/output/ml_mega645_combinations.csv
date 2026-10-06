@@ -1,0 +1,10 @@
+﻿strategy,numbers,sum,odd_even,low_high
+Random Forest,07 17 21 26 29 35,135,5/1,4/2
+Hồi quy Logistic,20 21 36 38 39 40,194,2/4,2/4
+Tần suất 100 kỳ,04 06 16 22 31 36,115,1/5,4/2
+Số quá hạn (delay),05 08 19 32 35 42,141,3/3,3/3
+Balanced Ensemble,16 22 31 36 42 44,191,1/5,2/4
+ML Focus,06 16 22 31 36 45,156,2/4,3/3
+Statistical Focus,06 15 16 20 31 36,124,2/4,4/2
+Diversified,06 15 16 20 31 45,133,3/3,4/2
+Alternative,22 31 35 36 42 44,210,2/4,1/5

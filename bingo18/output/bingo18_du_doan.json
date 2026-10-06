@@ -1,0 +1,164 @@
+{
+  "thoi_diem_tao": "2026-10-06 21:40:42",
+  "canh_bao": "Đây là công cụ thử nghiệm thống kê/học máy. Bingo18 là quá trình ngẫu nhiên; không có phương pháp nào đảm bảo dự đoán đúng. Chỉ dùng cho mục đích tham khảo và học tập.",
+  "based_on": {
+    "draw_count": 56702,
+    "last_draw_id": 56702,
+    "last_draw": [
+      4,
+      4,
+      1
+    ]
+  },
+  "mo_hinh": "validation_weighted_ensemble",
+  "trong_so_thanh_phan": {
+    "theoretical_dice": 0.9493859043897513,
+    "historical_frequency": 0.005000000000000174,
+    "recent_frequency": 0.025614095610248237,
+    "exponential_trend": 0.005,
+    "sum_transition": 0.005,
+    "hist_gradient_boosting": 0.005000000000000076,
+    "random_forest": 0.00500000000000015
+  },
+  "du_doan_tong_cao_nhat": 11,
+  "confidence_probability": 0.12492006934749601,
+  "normalized_entropy": 0.9003550690568999,
+  "confidence_note": "Xác suất từ ensemble, không phải đảm bảo độ chính xác hay xác suất trúng.",
+  "component_predictions": {
+    "theoretical_dice": {
+      "top_sum": 10,
+      "top_probability": 0.125
+    },
+    "historical_frequency": {
+      "top_sum": 11,
+      "top_probability": 0.12606212318866128
+    },
+    "recent_frequency": {
+      "top_sum": 9,
+      "top_probability": 0.14336917562724014
+    },
+    "exponential_trend": {
+      "top_sum": 9,
+      "top_probability": 0.14512975063973452
+    },
+    "sum_transition": {
+      "top_sum": 11,
+      "top_probability": 0.12908646501680415
+    },
+    "hist_gradient_boosting": {
+      "top_sum": 11,
+      "top_probability": 0.1261788506291393
+    },
+    "random_forest": {
+      "top_sum": 9,
+      "top_probability": 0.1220071576885819
+    }
+  },
+  "phan_phoi_tong": [
+    {
+      "tong": 3,
+      "xac_suat_ensemble": 0.0047317923936567325,
+      "xac_suat_ly_thuyet": 0.004629629629629629,
+      "chenh_lech": 0.00010216276402710313
+    },
+    {
+      "tong": 4,
+      "xac_suat_ensemble": 0.014035377552434706,
+      "xac_suat_ly_thuyet": 0.013888888888888888,
+      "chenh_lech": 0.00014648866354581742
+    },
+    {
+      "tong": 5,
+      "xac_suat_ensemble": 0.028227647031560023,
+      "xac_suat_ly_thuyet": 0.027777777777777776,
+      "chenh_lech": 0.00044986925378224726
+    },
+    {
+      "tong": 6,
+      "xac_suat_ensemble": 0.0457453051481184,
+      "xac_suat_ly_thuyet": 0.046296296296296294,
+      "chenh_lech": -0.0005509911481778942
+    },
+    {
+      "tong": 7,
+      "xac_suat_ensemble": 0.06870286555620295,
+      "xac_suat_ly_thuyet": 0.06944444444444445,
+      "chenh_lech": -0.0007415788882415009
+    },
+    {
+      "tong": 8,
+      "xac_suat_ensemble": 0.09636942518019263,
+      "xac_suat_ly_thuyet": 0.09722222222222222,
+      "chenh_lech": -0.0008527970420295905
+    },
+    {
+      "tong": 9,
+      "xac_suat_ensemble": 0.11660652245758235,
+      "xac_suat_ly_thuyet": 0.11574074074074074,
+      "chenh_lech": 0.0008657817168416099
+    },
+    {
+      "tong": 10,
+      "xac_suat_ensemble": 0.12455406225218137,
+      "xac_suat_ly_thuyet": 0.125,
+      "chenh_lech": -0.0004459377478186338
+    },
+    {
+      "tong": 11,
+      "xac_suat_ensemble": 0.12492006934749601,
+      "xac_suat_ly_thuyet": 0.125,
+      "chenh_lech": -7.993065250398723e-05
+    },
+    {
+      "tong": 12,
+      "xac_suat_ensemble": 0.11606535604242114,
+      "xac_suat_ly_thuyet": 0.11574074074074074,
+      "chenh_lech": 0.0003246153016804032
+    },
+    {
+      "tong": 13,
+      "xac_suat_ensemble": 0.09687025854779603,
+      "xac_suat_ly_thuyet": 0.09722222222222222,
+      "chenh_lech": -0.00035196367442619225
+    },
+    {
+      "tong": 14,
+      "xac_suat_ensemble": 0.06968149330468595,
+      "xac_suat_ly_thuyet": 0.06944444444444445,
+      "chenh_lech": 0.00023704886024150662
+    },
+    {
+      "tong": 15,
+      "xac_suat_ensemble": 0.04641746688195632,
+      "xac_suat_ly_thuyet": 0.046296296296296294,
+      "chenh_lech": 0.00012117058566002425
+    },
+    {
+      "tong": 16,
+      "xac_suat_ensemble": 0.02847492049116687,
+      "xac_suat_ly_thuyet": 0.027777777777777776,
+      "chenh_lech": 0.0006971427133890921
+    },
+    {
+      "tong": 17,
+      "xac_suat_ensemble": 0.014071502421620988,
+      "xac_suat_ly_thuyet": 0.013888888888888888,
+      "chenh_lech": 0.00018261353273209963
+    },
+    {
+      "tong": 18,
+      "xac_suat_ensemble": 0.004525935390927335,
+      "xac_suat_ly_thuyet": 0.004629629629629629,
+      "chenh_lech": -0.00010369423870229457
+    }
+  ],
+  "top3_tong": [
+    11,
+    10,
+    9
+  ],
+  "p_nho_3_10": 0.49897299757192914,
+  "p_lon_11_18": 0.5010270024280706,
+  "ket_luan_danh_gia": "Mô hình KHÔNG vượt được phân phối lý thuyết của 3 xúc xắc công bằng một cách có ý nghĩa thống kê. Phù hợp với bản chất ngẫu nhiên: dự đoán tốt nhất vẫn là phân phối lý thuyết.",
+  "ghi_chu": "Kết quả chỉ mang tính tham khảo thống kê, không đảm bảo trúng thưởng."
+}

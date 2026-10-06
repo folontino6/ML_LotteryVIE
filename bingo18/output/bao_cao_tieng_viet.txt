@@ -1,0 +1,117 @@
+BÁO CÁO PHÂN TÍCH VÀ DỰ ĐOÁN BINGO18
+================================================
+Thời điểm tạo báo cáo: 2026-10-06 21:40:42
+
+1. CHẤT LƯỢNG DỮ LIỆU
+- Số dòng đã đọc: 56,702
+- Số kỳ hợp lệ: 56,702
+- Dòng thiếu hoặc không đọc được số: 0
+- Dòng có số Bingo18 không hợp lệ: 0
+- Dòng trùng draw_id bị loại: 0
+- Dòng có tổng sai bị loại: 0
+- Khoảng draw_id sau sắp xếp: 1 -> 56702
+- Cảnh báo dữ liệu: Không phát hiện.
+
+2. PHÂN TÍCH THỐNG KÊ
+- Tần suất các mặt 1..6 (gộp ba vị trí): [28137, 28491, 28546, 28206, 28288, 28438]
+- Kiểm định độ đồng đều các mặt (p-value): 0.44122
+- So sánh phân phối tổng với lý thuyết ba xúc xắc (p-value): 0.80133
+- Tự tương quan tổng giữa hai kỳ liên tiếp: 0.00341
+- Thông tin tương hỗ của chuyển tiếp tổng (nats): 0.00199
+- Ma trận tương quan giữa vị trí n1, n2, n3:
+  1.00000  0.00073  0.00744
+  0.00073  1.00000  -0.00777
+  0.00744  -0.00777  1.00000
+- Diễn giải: p-value lớn nghĩa là chưa thấy bằng chứng dữ liệu lệch khỏi xúc xắc công bằng.
+
+3. PHƯƠNG PHÁP VÀ TRỌNG SỐ ENSEMBLE
+- Kết quả mục tiêu là tổng ba số Bingo18, từ 3 đến 18.
+- Đặc trưng chỉ dùng các kỳ trước; dữ liệu được chia theo thứ tự thời gian.
+- Trọng số ensemble được tối ưu trên tập validation, không dùng tập test để chọn trọng số.
+- phân phối lý thuyết 3 xúc xắc: 94.94%
+- tần suất toàn lịch sử: 0.50%
+- tần suất 100 kỳ gần nhất: 2.56%
+- tần suất suy giảm theo thời gian: 0.50%
+- phụ thuộc chuyển tiếp tổng: 0.50%
+- Gradient Boosting (histogram): 0.50%
+- Random Forest: 0.50%
+
+Log-loss trên tập validation (chỉ dùng để chọn trọng số ensemble):
+- phân phối lý thuyết 3 xúc xắc: 2.50497
+- tần suất toàn lịch sử: 2.50571
+- tần suất 100 kỳ gần nhất: 2.55970
+- tần suất suy giảm theo thời gian: 2.52498
+- phụ thuộc chuyển tiếp tổng: 2.50921
+- Gradient Boosting (histogram): 2.50582
+- Random Forest: 2.50836
+- validation_weighted_ensemble: 2.50495
+Giải thích: log-loss càng thấp thì phân phối xác suất càng đánh giá tốt kết quả thực tế trên validation.
+
+4. ĐÁNH GIÁ TRÊN TẬP KIỂM TRA THEO THỜI GIAN
+- Số kỳ kiểm tra: 5,651
+- Khoảng draw_id kiểm tra: [51052, 56702]
+- Log-loss tham chiếu theo lý thuyết ba xúc xắc: 2.49484
+- Mức ý nghĩa sau hiệu chỉnh Bonferroni: 0.00625
+
+Chỉ số các phương pháp (log-loss và Brier càng thấp càng tốt; Top-1/Top-3 càng cao càng tốt):
+- Ensemble kết hợp: log-loss=2.50115; Brier=0.90694; Top-1=12.69%; Top-3=37.27%
+- phân phối lý thuyết 3 xúc xắc: log-loss=2.50116; Brier=0.90694; Top-1=12.85%; Top-3=37.75%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.00001, +0.12, 0.45174
+- tần suất toàn lịch sử: log-loss=2.50136; Brier=0.90694; Top-1=12.81%; Top-3=37.09%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.00021, +1.00, 0.15747
+- tần suất 100 kỳ gần nhất: log-loss=2.55629; Brier=0.91254; Top-1=12.40%; Top-3=35.71%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.05514, +11.74, 0.00000
+- tần suất suy giảm theo thời gian: log-loss=2.52085; Brier=0.90913; Top-1=12.37%; Top-3=37.07%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.01971, +7.23, 0.00000
+- phụ thuộc chuyển tiếp tổng: log-loss=2.50278; Brier=0.90700; Top-1=13.52%; Top-3=37.89%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.00163, +1.63, 0.05159
+- uniform_random: log-loss=2.77259; Brier=0.93750; Top-1=5.96%; Top-3=18.23%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.27144, +33.51, 0.00000
+- Gradient Boosting (histogram): log-loss=2.50138; Brier=0.90693; Top-1=13.04%; Top-3=37.09%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.00023, +0.96, 0.16956
+- Random Forest: log-loss=2.50279; Brier=0.90728; Top-1=12.86%; Top-3=37.09%
+  So với ensemble (chênh lệch log-loss, z, p-value một phía): +0.00164, +1.66, 0.04837
+- Kết luận đánh giá: Mô hình KHÔNG vượt được phân phối lý thuyết của 3 xúc xắc công bằng một cách có ý nghĩa thống kê. Phù hợp với bản chất ngẫu nhiên: dự đoán tốt nhất vẫn là phân phối lý thuyết.
+- Các phương pháp được ensemble vượt theo kiểm định: ['recent_frequency', 'exponential_trend', 'uniform_random']
+
+5. DỰ ĐOÁN KỲ TIẾP THEO
+- Số kỳ lịch sử sử dụng: 56,702
+- Kỳ cuối đã biết (ba số): [4, 4, 1]
+- Tổng có xác suất cao nhất: 11
+- Xác suất ensemble của tổng đứng đầu: 12.49%
+- Mức bất định entropy chuẩn hóa (0 rõ hơn, 1 phân tán hơn): 0.9004
+- Ba tổng có xác suất cao nhất: [11, 10, 9]
+- P(tổng nhỏ 3-10): 49.90%
+- P(tổng lớn 11-18): 50.10%
+
+Phân phối xác suất dự đoán:
+Tổng | Ensemble | Lý thuyết ba xúc xắc | Chênh lệch
+   3 |    0.47% |               0.46% |  +0.0102%
+   4 |    1.40% |               1.39% |  +0.0146%
+   5 |    2.82% |               2.78% |  +0.0450%
+   6 |    4.57% |               4.63% |  -0.0551%
+   7 |    6.87% |               6.94% |  -0.0742%
+   8 |    9.64% |               9.72% |  -0.0853%
+   9 |   11.66% |              11.57% |  +0.0866%
+  10 |   12.46% |              12.50% |  -0.0446%
+  11 |   12.49% |              12.50% |  -0.0080%
+  12 |   11.61% |              11.57% |  +0.0325%
+  13 |    9.69% |               9.72% |  -0.0352%
+  14 |    6.97% |               6.94% |  +0.0237%
+  15 |    4.64% |               4.63% |  +0.0121%
+  16 |    2.85% |               2.78% |  +0.0697%
+  17 |    1.41% |               1.39% |  +0.0183%
+  18 |    0.45% |               0.46% |  -0.0104%
+
+Dự đoán theo từng thành phần:
+- phân phối lý thuyết 3 xúc xắc: tổng đứng đầu 10, xác suất 12.50%
+- tần suất toàn lịch sử: tổng đứng đầu 11, xác suất 12.61%
+- tần suất 100 kỳ gần nhất: tổng đứng đầu 9, xác suất 14.34%
+- tần suất suy giảm theo thời gian: tổng đứng đầu 9, xác suất 14.51%
+- phụ thuộc chuyển tiếp tổng: tổng đứng đầu 11, xác suất 12.91%
+- Gradient Boosting (histogram): tổng đứng đầu 11, xác suất 12.62%
+- Random Forest: tổng đứng đầu 9, xác suất 12.20%
+
+LƯU Ý
+Đây là công cụ thử nghiệm thống kê/học máy. Bingo18 là quá trình ngẫu nhiên; không có phương pháp nào đảm bảo dự đoán đúng. Chỉ dùng cho mục đích tham khảo và học tập.
+Xác suất và confidence là độ bất định của phân phối ước lượng, không phải cam kết chính xác hay bảo đảm trúng thưởng.

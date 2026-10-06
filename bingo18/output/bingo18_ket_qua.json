@@ -1,0 +1,184 @@
+{
+  "thoi_diem": "2026-10-06 21:40:41",
+  "canh_bao": "Đây là công cụ thử nghiệm thống kê/học máy. Bingo18 là quá trình ngẫu nhiên; không có phương pháp nào đảm bảo dự đoán đúng. Chỉ dùng cho mục đích tham khảo và học tập.",
+  "muc_tieu": "Phân phối xác suất của tổng 3..18 ở kỳ kế tiếp (16 lớp)",
+  "phuong_phap_kiem_dinh": "Chia theo thời gian: train 80% / validation 10% / test 10%",
+  "thanh_phan_ensemble": [
+    "theoretical_dice",
+    "historical_frequency",
+    "recent_frequency",
+    "exponential_trend",
+    "sum_transition",
+    "hist_gradient_boosting",
+    "random_forest"
+  ],
+  "trong_so_ensemble": {
+    "theoretical_dice": 0.9493859043897513,
+    "historical_frequency": 0.005000000000000174,
+    "recent_frequency": 0.025614095610248237,
+    "exponential_trend": 0.005,
+    "sum_transition": 0.005,
+    "hist_gradient_boosting": 0.005000000000000076,
+    "random_forest": 0.00500000000000015
+  },
+  "so_ky_du_lieu": 56702,
+  "so_mau": 56502,
+  "so_dac_trung": 52,
+  "cau_hinh": {
+    "csv_file": "C:\\Users\\nguye\\Desktop\\bingo18\\data\\bingo18.csv",
+    "mode": "full",
+    "output_dir": "output",
+    "model_path": "",
+    "seed": 42,
+    "train_frac": 0.8,
+    "val_frac": 0.1,
+    "max_iter": 6,
+    "learning_rate": 0.03,
+    "n_estimators": 6,
+    "max_depth": 8,
+    "min_samples_leaf": 500,
+    "n_jobs": 2,
+    "no_save_model": true,
+    "debug": false
+  },
+  "chon_mo_hinh": {
+    "best_name": "validation_weighted_ensemble",
+    "best_iters": {
+      "hist_gradient_boosting": 1,
+      "random_forest": null
+    },
+    "ensemble_weights": {
+      "theoretical_dice": 0.9493859043897513,
+      "historical_frequency": 0.005000000000000174,
+      "recent_frequency": 0.025614095610248237,
+      "exponential_trend": 0.005,
+      "sum_transition": 0.005,
+      "hist_gradient_boosting": 0.005000000000000076,
+      "random_forest": 0.00500000000000015
+    },
+    "minimum_component_weight": 0.005,
+    "validation_logloss": {
+      "theoretical_dice": 2.504966715151783,
+      "historical_frequency": 2.505709669636025,
+      "recent_frequency": 2.5596958044727316,
+      "exponential_trend": 2.5249787283221914,
+      "sum_transition": 2.5092106177079927,
+      "hist_gradient_boosting": 2.5058226978156237,
+      "random_forest": 2.508356430559169,
+      "validation_weighted_ensemble": 2.504951707184178
+    }
+  },
+  "danh_gia_test": {
+    "so_ky_test": 5651,
+    "draw_id_test": [
+      51052,
+      56702
+    ],
+    "log_loss_ky_vong_neu_xuc_xac_cong_bang": 2.494838964870646,
+    "bang_so_sanh": {
+      "validation_weighted_ensemble": {
+        "log_loss": 2.501147632078827,
+        "brier": 0.9069390989446343,
+        "top1": 0.12688019819500973,
+        "top3": 0.37267740222969387
+      },
+      "theoretical_dice": {
+        "log_loss": 2.501162407812624,
+        "brier": 0.9069403845635684,
+        "top1": 0.1284728366660768,
+        "top3": 0.3774553176428951
+      },
+      "historical_frequency": {
+        "log_loss": 2.501358954312635,
+        "brier": 0.9069386248920949,
+        "top1": 0.12811891700583966,
+        "top3": 0.37090780392850825
+      },
+      "recent_frequency": {
+        "log_loss": 2.5562856436528603,
+        "brier": 0.9125388886907664,
+        "top1": 0.12404884091311272,
+        "top3": 0.3571049371792603
+      },
+      "exponential_trend": {
+        "log_loss": 2.5208537668619977,
+        "brier": 0.9091280486534167,
+        "top1": 0.1236949212528756,
+        "top3": 0.3707308440983897
+      },
+      "sum_transition": {
+        "log_loss": 2.5027785937088667,
+        "brier": 0.906999345399732,
+        "top1": 0.1351973102105822,
+        "top3": 0.3788709962838436
+      },
+      "uniform_random": {
+        "log_loss": 2.772588722239781,
+        "brier": 0.9375,
+        "top1": 0.05963546274995576,
+        "top3": 0.18226862502212
+      },
+      "hist_gradient_boosting": {
+        "log_loss": 2.501376379058952,
+        "brier": 0.9069337623162278,
+        "top1": 0.130419394797381,
+        "top3": 0.37090780392850825
+      },
+      "random_forest": {
+        "log_loss": 2.5027912705563864,
+        "brier": 0.9072788144837057,
+        "top1": 0.12864979649619537,
+        "top3": 0.37090780392850825
+      }
+    },
+    "kiem_dinh_so_voi_baseline": {
+      "theoretical_dice": {
+        "chenh_lech_log_loss": 1.4775733797126674e-05,
+        "z": 0.12127480524238587,
+        "p_value_mot_phia": 0.45173668760466484
+      },
+      "historical_frequency": {
+        "chenh_lech_log_loss": 0.0002113222338078875,
+        "z": 1.004910990193499,
+        "p_value_mot_phia": 0.15746985596826824
+      },
+      "recent_frequency": {
+        "chenh_lech_log_loss": 0.055138011574033204,
+        "z": 11.741720743705988,
+        "p_value_mot_phia": 3.894272138043578e-32
+      },
+      "exponential_trend": {
+        "chenh_lech_log_loss": 0.01970613478317057,
+        "z": 7.22984085262501,
+        "p_value_mot_phia": 2.4178018530612725e-13
+      },
+      "sum_transition": {
+        "chenh_lech_log_loss": 0.0016309616300392079,
+        "z": 1.6296126870908068,
+        "p_value_mot_phia": 0.05159169063766977
+      },
+      "uniform_random": {
+        "chenh_lech_log_loss": 0.27144109016095386,
+        "z": 33.505641877560095,
+        "p_value_mot_phia": 1.9944591259679661e-246
+      },
+      "hist_gradient_boosting": {
+        "chenh_lech_log_loss": 0.00022874698012430845,
+        "z": 0.9559157169536575,
+        "p_value_mot_phia": 0.16955740888353343
+      },
+      "random_forest": {
+        "chenh_lech_log_loss": 0.0016436384775594154,
+        "z": 1.6608704147625206,
+        "p_value_mot_phia": 0.04836973763866363
+      }
+    },
+    "baseline_bi_vuot": [
+      "recent_frequency",
+      "exponential_trend",
+      "uniform_random"
+    ],
+    "alpha_bonferroni": 0.00625,
+    "ket_luan": "Mô hình KHÔNG vượt được phân phối lý thuyết của 3 xúc xắc công bằng một cách có ý nghĩa thống kê. Phù hợp với bản chất ngẫu nhiên: dự đoán tốt nhất vẫn là phân phối lý thuyết."
+  }
+}
